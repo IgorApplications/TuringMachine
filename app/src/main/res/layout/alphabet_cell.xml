@@ -1,0 +1,10 @@
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+          android:id="@+id/alphabet_cell"
+          android:layout_width="match_parent"
+          android:layout_height="40dp"
+          android:textSize="20sp"
+          android:textColor="@color/black"
+          android:background="@drawable/cell"
+          android:gravity="center"
+          android:onClick="changeRegister">
+</TextView>

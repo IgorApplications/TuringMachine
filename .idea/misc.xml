@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Development/JVM/Android Views/AndroidTuringMachine/app/src/main/res/drawable/alpha_outline.xml" value="0.1355" />
+        <entry key="..\:/Development/JVM/Android Views/AndroidTuringMachine/app/src/main/res/drawable/cell.xml" value="0.107" />
+        <entry key="..\:/Development/JVM/Android Views/AndroidTuringMachine/app/src/main/res/drawable/gradient.xml" value="0.1355" />
+        <entry key="..\:/Development/JVM/Android Views/AndroidTuringMachine/app/src/main/res/drawable/ic_company_name.xml" value="0.1" />
+        <entry key="..\:/Development/JVM/Android Views/AndroidTuringMachine/app/src/main/res/drawable/ic_logo.xml" value="0.1" />
+        <entry key="..\:/Development/JVM/Android Views/AndroidTuringMachine/app/src/main/res/layout/activity_main.xml" value="0.19298245614035087" />
+        <entry key="..\:/Development/JVM/Android Views/AndroidTuringMachine/app/src/main/res/layout/alphabet_cell.xml" value="0.25" />
+        <entry key="..\:/Development/JVM/Android Views/AndroidTuringMachine/app/src/main/res/layout/register_titile.xml" value="0.25" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="jbr-11" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

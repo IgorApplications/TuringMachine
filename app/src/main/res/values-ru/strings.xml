@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name" translatable="true">Машина Тьюринга</string>
+    <string name="error_inner_machine">Ошибка в работе Машины Тьюринга</string>
+    <string name="change_register">Изменить регистр (см. Обучение)</string>
+    <string name="cancel">Отмена</string>
+    <string name="confirm">Подтвердить</string>
+    <string name="command_error">Ошибка в команде</string>
+    <string name="select_char">Выберите символ</string>
+    <string name="change_alphabet">Изменить алфавит</string>
+    <string name="warn_change_alphabet">При изменении порядка алфавита или удалении символа все регистры будут стёрты (безопасно добавление в конец)</string>
+    <string name="done">Сделано!</string>
+    <string name="repeating_chars">Повторяющиеся символы</string>
+    <string name="ok">Понятно</string>
+    <string name="explain_command">Команда должна состоять из трех частей (|q номер| |символ из алфавита| |L/R/N|) через пробел</string>
+    <string name="alphabet">Алфавит: </string>
+
+</resources>

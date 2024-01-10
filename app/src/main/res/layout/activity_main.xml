@@ -1,0 +1,597 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".view.MainActivity">
+
+    <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/background"
+            android:scaleType="centerCrop"/>
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+        <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="serif"
+                android:text="@string/app_name"
+                android:textColor="@color/red"
+                android:textSize="32sp" />
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_margin="5dp">
+
+
+            <ImageButton
+                    android:backgroundTint="@color/main_blue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_baseline_arrow_back_ios_new_36"
+                    android:onClick="makeLeftMove"/>
+
+            <ImageButton
+                    android:backgroundTint="@color/main_blue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_baseline_arrow_forward_ios_36"
+                    android:onClick="makeRightMove"/>
+
+            <ImageButton
+                    android:backgroundTint="@color/main_blue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/ic_baseline_playlist_add_36"
+                    android:onClick="addRegister"/>
+
+            <ImageButton
+                    android:backgroundTint="@color/main_blue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/ic_baseline_launch_36"
+                    android:onClick="launch"/>
+
+        </LinearLayout>
+
+        <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp">
+
+            <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                    <TextView
+                            android:id="@+id/tapeText0"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:textAlignment="center"
+                            android:fontFamily="serif"
+                            android:text="0"
+                            android:textColor="@color/black"
+                            android:textSize="20sp"
+                            android:padding="3dp"
+                            android:background="@drawable/cell"/>
+
+                    <TextView
+                            android:id="@+id/tape0"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:fontFamily="serif"
+                            android:text="_"
+                            android:textColor="@color/black"
+                            android:padding="3dp"
+                            android:gravity="center"
+                            android:textSize="20sp"
+                            android:focusable="false"
+                            android:background="@drawable/cell"
+                            android:onClick="changeInfTape"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                    <TextView
+                            android:id="@+id/tapeText1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textAlignment="center"
+                            android:fontFamily="serif"
+                            android:text="1"
+                            android:textColor="@color/black"
+                            android:textSize="20sp"
+                            android:padding="3dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/cell"/>
+
+                    <TextView
+                            android:id="@+id/tape1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:fontFamily="serif"
+                            android:text="_"
+                            android:padding="3dp"
+                            android:focusable="false"
+                            android:textColor="@color/black"
+                            android:gravity="center"
+                            android:textSize="20sp"
+                            android:layout_weight="1"
+                            android:background="@drawable/cell"
+                            android:onClick="changeInfTape"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                    <TextView
+                            android:id="@+id/tapeText2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textAlignment="center"
+                            android:fontFamily="serif"
+                            android:text="2"
+                            android:padding="3dp"
+                            android:textColor="@color/black"
+                            android:textSize="20sp"
+                            android:layout_weight="1"
+                            android:background="@drawable/cell"/>
+
+                    <TextView
+                            android:id="@+id/tape2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:fontFamily="serif"
+                            android:text="_"
+                            android:padding="3dp"
+                            android:focusable="false"
+                            android:textColor="@color/black"
+                            android:gravity="center"
+                            android:textSize="20sp"
+                            android:layout_weight="1"
+                            android:background="@drawable/cell"
+                            android:onClick="changeInfTape"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                    <TextView
+                            android:id="@+id/tapeText3"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textAlignment="center"
+                            android:fontFamily="serif"
+                            android:text="3"
+                            android:padding="3dp"
+                            android:textColor="@color/black"
+                            android:textSize="20sp"
+                            android:layout_weight="1"
+                            android:background="@drawable/cell"/>
+
+                    <TextView
+                            android:id="@+id/tape3"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:fontFamily="serif"
+                            android:text="_"
+                            android:padding="3dp"
+                            android:focusable="false"
+                            android:textColor="@color/black"
+                            android:gravity="center"
+                            android:textSize="20sp"
+                            android:layout_weight="1"
+                            android:background="@drawable/cell"
+                            android:onClick="changeInfTape"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                    <TextView
+                            android:id="@+id/tapeText4"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textAlignment="center"
+                            android:fontFamily="serif"
+                            android:text="4"
+                            android:padding="3dp"
+                            android:textColor="@color/black"
+                            android:textSize="20sp"
+                            android:layout_weight="1"
+                            android:background="@drawable/cell"/>
+
+                    <TextView
+                            android:id="@+id/tape4"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:fontFamily="serif"
+                            android:text="_"
+                            android:padding="3dp"
+                            android:focusable="false"
+                            android:textColor="@color/black"
+                            android:gravity="center"
+                            android:textSize="20sp"
+                            android:layout_weight="1"
+                            android:background="@drawable/cell"
+                            android:onClick="changeInfTape"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                    <TextView
+                            android:id="@+id/tapeText5"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textAlignment="center"
+                            android:fontFamily="serif"
+                            android:text="5"
+                            android:padding="3dp"
+                            android:textColor="@color/black"
+                            android:textSize="20sp"
+                            android:layout_weight="1"
+                            android:background="@drawable/cell"/>
+
+                    <TextView
+                            android:id="@+id/tape5"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:fontFamily="serif"
+                            android:text="_"
+                            android:padding="3dp"
+                            android:focusable="false"
+                            android:textColor="@color/black"
+                            android:gravity="center"
+                            android:textSize="20sp"
+                            android:layout_weight="1"
+                            android:background="@drawable/cell"
+                            android:onClick="changeInfTape"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                    <TextView
+                            android:id="@+id/tapeText6"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textAlignment="center"
+                            android:fontFamily="serif"
+                            android:text="6"
+                            android:padding="3dp"
+                            android:textColor="@color/black"
+                            android:textSize="20sp"
+                            android:layout_weight="1"
+                            android:background="@drawable/cell"/>
+
+                    <TextView
+                            android:id="@+id/tape6"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:fontFamily="serif"
+                            android:text="_"
+                            android:padding="3dp"
+                            android:focusable="false"
+                            android:textColor="@color/black"
+                            android:gravity="center"
+                            android:textSize="20sp"
+                            android:layout_weight="1"
+                            android:background="@drawable/cell"
+                            android:onClick="changeInfTape"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                    <TextView
+                            android:id="@+id/tapeText7"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:fontFamily="serif"
+                            android:text="7"
+                            android:padding="3dp"
+                            android:textColor="@color/black"
+                            android:textSize="20sp"
+                            android:layout_weight="1"
+                            android:background="@drawable/cell"/>
+
+                    <TextView
+                            android:id="@+id/tape7"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:fontFamily="serif"
+                            android:text="_"
+                            android:padding="3dp"
+                            android:focusable="false"
+                            android:textColor="@color/black"
+                            android:gravity="center"
+                            android:textSize="20sp"
+                            android:layout_weight="1"
+                            android:background="@drawable/cell"
+                            android:onClick="changeInfTape"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                    <TextView
+                            android:id="@+id/tapeText8"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:fontFamily="serif"
+                            android:text="8"
+                            android:padding="3dp"
+                            android:textColor="@color/black"
+                            android:textSize="20sp"
+                            android:layout_weight="1"
+                            android:background="@drawable/cell"/>
+
+                    <TextView
+                            android:id="@+id/tape8"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:fontFamily="serif"
+                            android:text="_"
+                            android:padding="3dp"
+                            android:focusable="false"
+                            android:textColor="@color/black"
+                            android:gravity="center"
+                            android:textSize="20sp"
+                            android:layout_weight="1"
+                            android:background="@drawable/cell"
+                            android:onClick="changeInfTape"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                    <TextView
+                            android:id="@+id/tapeText9"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:fontFamily="serif"
+                            android:text="9"
+                            android:padding="3dp"
+                            android:textColor="@color/black"
+                            android:textSize="20sp"
+                            android:layout_weight="1"
+                            android:background="@drawable/cell"/>
+
+                    <TextView
+                            android:id="@+id/tape9"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:fontFamily="serif"
+                            android:text="_"
+                            android:padding="3dp"
+                            android:focusable="false"
+                            android:textColor="@color/black"
+                            android:gravity="center"
+                            android:textSize="20sp"
+                            android:layout_weight="1"
+                            android:background="@drawable/cell"
+                            android:onClick="changeInfTape"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                    <TextView
+                            android:id="@+id/tapeText10"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:fontFamily="serif"
+                            android:text="10"
+                            android:padding="3dp"
+                            android:textColor="@color/black"
+                            android:textSize="20sp"
+                            android:layout_weight="1"
+                            android:background="@drawable/cell"/>
+
+                    <TextView
+                            android:id="@+id/tape10"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:fontFamily="serif"
+                            android:text="_"
+                            android:padding="3dp"
+                            android:focusable="false"
+                            android:textColor="@color/black"
+                            android:gravity="center"
+                            android:textSize="20sp"
+                            android:layout_weight="1"
+                            android:background="@drawable/cell"
+                            android:onClick="changeInfTape"/>
+
+                </LinearLayout>
+
+            </TableRow>
+
+        </TableLayout>
+
+
+        <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp">
+
+            <Button
+                    android:text="@string/alphabet"
+                    android:backgroundTint="@color/main_blue"
+                    android:textSize="16sp"
+                    android:textColor="@color/white"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="changeAlphabet"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginLeft="5dp"/>
+
+            <TextView
+                    android:background="@color/main_blue"
+                    android:id="@+id/alphabet_text"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp"
+                    android:gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:textColor="@color/white"
+                    android:text="_"
+                    android:textSize="20sp"/>
+
+        </LinearLayout>
+
+
+        <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="5dp">
+
+        <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                        android:id="@+id/registers"
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:weightSum="11">
+
+                    <LinearLayout
+                            android:id="@+id/alphabet"
+                            android:layout_width="40dp"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+
+                        <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="40dp"
+                                android:text=""
+                                android:textSize="20sp"
+                                android:textColor="@color/black"
+                                android:background="@drawable/cell"/>
+
+                        <TextView
+                                android:id="@+id/self_alpha_"
+                                android:layout_width="match_parent"
+                                android:layout_height="40dp"
+                                android:text="_"
+                                android:textSize="20sp"
+                                android:textColor="@color/black"
+                                android:gravity="center"
+                                android:background="@drawable/cell"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                            android:id="@+id/q0"
+                            android:layout_width="100dp"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+
+                        <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="40dp"
+                                android:background="@drawable/cell"
+                                android:text="q0"
+                                android:gravity="center"
+                                android:textSize="20sp"
+                                android:textColor="@color/black"/>
+
+                        <TextView
+                                android:id="@+id/alpha_"
+                                android:layout_width="match_parent"
+                                android:layout_height="40dp"
+                                android:textSize="20sp"
+                                android:textColor="@color/black"
+                                android:gravity="center"
+                                android:background="@drawable/cell"
+                                android:onClick="changeRegister"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+        </ScrollView>
+
+        </HorizontalScrollView>
+
+    </LinearLayout>
+
+
+</RelativeLayout>

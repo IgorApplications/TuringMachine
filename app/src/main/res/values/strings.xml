@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">Turing Machine</string>
+    <string name="error_inner_machine">Error in the Turing Machine</string>
+    <string name="change_register">Change case (see Training)</string>
+    <string name="cancel">Cancel</string>
+    <string name="confirm">Confirm</string>
+    <string name="command_error">Command error</string>
+    <string name="select_char">Select a character</string>
+    <string name="change_alphabet">Change alphabet</string>
+    <string name="warn_change_alphabet">When changing the alphabet order or deleting a character, all cases will be erased (safe to add to the end)</string>
+    <string name="done">Done!</string>
+    <string name="repeating_chars">Repeating characters</string>
+    <string name="ok">It\'s clear</string>
+    <string name="explain_command">The command must consist of three parts (|q number| |character from the alphabet| |L/R/N|) separated by a space</string>
+    <string name="alphabet">Alphabet: </string>
+
+</resources>
